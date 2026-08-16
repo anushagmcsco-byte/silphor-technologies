@@ -75,20 +75,20 @@ export default function HomePage() {
             
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
-              <div className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ${darkMode ? 'bg-orange-500/10 border-orange-500/30 text-orange-400' : 'bg-blue-500/10 border-blue-500/30 text-blue-400'} text-xs font-mono`}>
+              <div className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ${darkMode ? 'bg-orange-500/10 border-orange-500/30 text-orange-400' : 'bg-blue-500/10 border-blue-500/30 text-blue-700'} text-xs font-mono border`}>
                 <Sparkles className="w-3.5 h-3.5 animate-spin" />
                 <span>Silphor Technologies Private Limited</span>
               </div>
 
               <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
-                Engineering the Future of <span className={`bg-gradient-to-r ${darkMode ? 'from-blue-500 via-orange-400 to-amber-500' : 'from-blue-500 via-cyan-400 to-purple-500'} bg-clip-text text-transparent`}>Semiconductor Technology</span>
+                Engineering the Future of <span className={`bg-gradient-to-r ${darkMode ? 'from-blue-500 via-orange-400 to-amber-500' : 'from-blue-600 via-cyan-600 to-purple-600'} bg-clip-text text-transparent`}>Semiconductor Technology</span>
               </h1>
 
-              <p className={`text-sm font-mono ${darkMode ? 'text-orange-400' : 'text-cyan-400'} uppercase tracking-widest`}>
+              <p className={`text-sm font-mono ${darkMode ? 'text-orange-400' : 'text-cyan-600'} uppercase tracking-widest`}>
                 VLSI • AI • EDA • Semiconductor Engineering • Industry-Ready Skills
               </p>
 
-              <p className="text-base text-slate-300 max-w-2xl leading-relaxed">
+              <p className={`text-base max-w-2xl leading-relaxed ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                 Silphor Technologies delivers advanced VLSI learning, semiconductor engineering capabilities, hands-on technology platforms, and career-focused programs designed for the next generation of chip engineers.
               </p>
 
@@ -102,13 +102,13 @@ export default function HomePage() {
                 </Link>
                 <Link 
                   href="/vlsi-programs" 
-                  className="px-6 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm border border-slate-700 transition-all hover:scale-102"
+                  className={`px-6 py-3.5 rounded-2xl font-medium text-sm transition-all hover:scale-102 ${darkMode ? 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-700' : 'bg-slate-200 hover:bg-slate-300 text-slate-900 border border-slate-300'}`}
                 >
                   Start Your VLSI Journey
                 </Link>
                 <button 
                   onClick={() => setAiModalOpen(true)}
-                  className="px-6 py-3.5 rounded-2xl bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 font-medium text-sm border border-cyan-500/30 transition-all flex items-center gap-2"
+                  className={`px-6 py-3.5 rounded-2xl font-medium text-sm transition-all flex items-center gap-2 ${darkMode ? 'bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 border border-cyan-500/30' : 'bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-700 border border-cyan-500/30'}`}
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Talk to Silphor AI</span>
@@ -130,7 +130,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-mono uppercase tracking-widest">
             {techStrip.map((item, idx) => (
-              <span key={idx} className={`px-4 py-2 rounded-xl border transition-all cursor-default ${darkMode ? 'bg-slate-900 border-slate-800 text-slate-300 hover:border-cyan-500/50 hover:text-cyan-400' : 'bg-slate-100 border-slate-200 text-slate-700 hover:border-cyan-500 hover:text-cyan-600'}`}>
+              <span key={idx} className={`px-4 py-2 rounded-xl border transition-all cursor-default ${darkMode ? 'bg-slate-900 border-slate-800 text-slate-300 hover:border-cyan-500/50 hover:text-cyan-400' : 'bg-white border-slate-200 text-slate-700 hover:border-cyan-500 hover:text-cyan-600 shadow-sm'}`}>
                 {item}
               </span>
             ))}
@@ -142,9 +142,9 @@ export default function HomePage() {
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <span className="text-xs font-mono text-cyan-500 uppercase tracking-widest">Global Semiconductor Leader</span>
+            <span className={`text-xs font-mono ${darkMode ? 'text-cyan-500' : 'text-cyan-600'} uppercase tracking-widest`}>Global Semiconductor Leader</span>
             <h2 className={`text-3xl sm:text-4xl font-bold tracking-tight ${darkMode ? 'text-white' : 'text-slate-900'}`}>Building the Next Generation of Semiconductor Engineers</h2>
-            <p className={`${darkMode ? 'text-slate-300' : 'text-slate-600'} leading-relaxed text-sm`}>
+            <p className={`leading-relaxed text-sm ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               Headquartered at #45 East Link Road, Malleswaram 3rd Cross, Bengaluru, Silphor Technologies bridges the gap between academic theory and advanced commercial chip tape-outs. We combine EDA cloud infrastructure with AI-powered mentorship.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
@@ -196,9 +196,9 @@ export default function HomePage() {
       <section className={`py-20 border-y ${darkMode ? 'bg-[#090e1d]/50 border-slate-800 text-white' : 'bg-slate-100/60 border-slate-200 text-slate-900'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-mono text-cyan-500 uppercase tracking-widest">Specialized Domains</span>
+            <span className={`text-xs font-mono ${darkMode ? 'text-cyan-500' : 'text-cyan-600'} uppercase tracking-widest`}>Specialized Domains</span>
             <h2 className={`text-3xl sm:text-4xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Core Technology & Engineering Areas</h2>
-            <p className={`${darkMode ? 'text-slate-400' : 'text-slate-600'} text-sm`}>Comprehensive coverage across the entire semiconductor design lifecycle.</p>
+            <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Comprehensive coverage across the entire semiconductor design lifecycle.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -221,7 +221,7 @@ export default function HomePage() {
       {/* Solutions */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-mono text-cyan-500 uppercase tracking-widest">Enterprise & Student Ecosystem</span>
+          <span className={`text-xs font-mono ${darkMode ? 'text-cyan-500' : 'text-cyan-600'} uppercase tracking-widest`}>Enterprise & Student Ecosystem</span>
           <h2 className={`text-3xl sm:text-4xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Comprehensive Silphor Solutions</h2>
         </div>
 
@@ -235,9 +235,9 @@ export default function HomePage() {
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className={`text-xl font-bold mb-3 ${darkMode ? 'text-white' : 'text-slate-900'}`}>{sol.title}</h3>
-                  <p className={`text-sm leading-relaxed mb-6 ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>{sol.desc}</p>
+                  <p className={`text-sm leading-relaxed mb-6 ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>{sol.desc}</p>
                 </div>
-                <Link href={sol.href} className="inline-flex items-center gap-2 text-cyan-500 font-semibold text-xs hover:text-cyan-400 transition-colors">
+                <Link href={sol.href} className={`inline-flex items-center gap-2 font-semibold text-xs transition-colors ${darkMode ? 'text-cyan-500 hover:text-cyan-400' : 'text-cyan-600 hover:text-cyan-700'}`}>
                   <span>Explore Solution</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -248,12 +248,12 @@ export default function HomePage() {
       </section>
 
       {/* Interactive RTL → GDSII Pipeline */}
-      <section className="py-24 bg-[#090e1d]/50 border-y border-slate-800">
+      <section className={`py-24 border-y ${darkMode ? 'bg-[#090e1d]/50 border-slate-800' : 'bg-slate-100/60 border-slate-200'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest">Interactive Engineering Flow</span>
-            <h2 className="text-3xl sm:text-4xl font-bold">RTL to GDSII Design Journey</h2>
-            <p className="text-slate-400 text-sm">Click each stage to inspect tools, challenges, and interview preparation questions.</p>
+            <span className={`text-xs font-mono ${darkMode ? 'text-cyan-400' : 'text-cyan-600'} uppercase tracking-widest`}>Interactive Engineering Flow</span>
+            <h2 className={`text-3xl sm:text-4xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>RTL to GDSII Design Journey</h2>
+            <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Click each stage to inspect tools, challenges, and interview preparation questions.</p>
           </div>
           <RtlToGdsPipeline />
         </div>
@@ -262,20 +262,20 @@ export default function HomePage() {
       {/* Cloud VLSI Lab Preview */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest">Cloud EDA Workstation</span>
-          <h2 className="text-3xl sm:text-4xl font-bold">Experience the Cloud VLSI Lab</h2>
-          <p className="text-slate-400 text-sm">Write Verilog, compile designs, and run simulations instantly in your browser.</p>
+          <span className={`text-xs font-mono ${darkMode ? 'text-cyan-400' : 'text-cyan-600'} uppercase tracking-widest`}>Cloud EDA Workstation</span>
+          <h2 className={`text-3xl sm:text-4xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Experience the Cloud VLSI Lab</h2>
+          <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Write Verilog, compile designs, and run simulations instantly in your browser.</p>
         </div>
         <CloudVlsiLab />
       </section>
 
       {/* STA Timing Analysis Lab */}
-      <section className="py-24 bg-[#090e1d]/50 border-y border-slate-800">
+      <section className={`py-24 border-y ${darkMode ? 'bg-[#090e1d]/50 border-slate-800' : 'bg-slate-100/60 border-slate-200'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest">Timing Closure Lab</span>
-            <h2 className="text-3xl sm:text-4xl font-bold">Interactive Static Timing Analysis</h2>
-            <p className="text-slate-400 text-sm">Adjust clock periods and combinational delays to evaluate setup and hold slacks.</p>
+            <span className={`text-xs font-mono ${darkMode ? 'text-cyan-400' : 'text-cyan-600'} uppercase tracking-widest`}>Timing Closure Lab</span>
+            <h2 className={`text-3xl sm:text-4xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Interactive Static Timing Analysis</h2>
+            <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Adjust clock periods and combinational delays to evaluate setup and hold slacks.</p>
           </div>
           <TimingAnalysisLab />
         </div>
@@ -285,10 +285,10 @@ export default function HomePage() {
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-16">
           <div>
-            <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest">Industry Programs</span>
-            <h2 className="text-3xl sm:text-4xl font-bold mt-1">Featured VLSI Programs</h2>
+            <span className={`text-xs font-mono ${darkMode ? 'text-cyan-400' : 'text-cyan-600'} uppercase tracking-widest`}>Industry Programs</span>
+            <h2 className={`text-3xl sm:text-4xl font-bold mt-1 ${darkMode ? 'text-white' : 'text-slate-900'}`}>Featured VLSI Programs</h2>
           </div>
-          <Link href="/vlsi-programs" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 text-white font-medium text-xs border border-slate-700 hover:bg-slate-700 transition-colors">
+          <Link href="/vlsi-programs" className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-xs border transition-colors ${darkMode ? 'bg-slate-800 text-white border-slate-700 hover:bg-slate-700' : 'bg-slate-200 text-slate-900 border-slate-300 hover:bg-slate-300'}`}>
             <span>View All Programs</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
@@ -296,14 +296,14 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {programsList.map((prog, idx) => (
-            <div key={idx} className="p-6 rounded-3xl bg-[#0b1329] border border-slate-700/80 shadow-xl flex flex-col justify-between">
+            <div key={idx} className={`p-6 rounded-3xl border shadow-xl flex flex-col justify-between ${darkMode ? 'bg-[#0b1329] border-slate-700/80 text-white' : 'bg-white border-slate-200 text-slate-900'}`}>
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-[10px] font-mono bg-blue-500/10 text-blue-400 px-2.5 py-0.5 rounded-full">{prog.level}</span>
-                  <span className="text-[10px] font-mono text-slate-400">{prog.duration}</span>
+                  <span className={`text-[10px] font-mono ${darkMode ? 'bg-blue-500/10 text-blue-400' : 'bg-blue-500/10 text-blue-600'} px-2.5 py-0.5 rounded-full`}>{prog.level}</span>
+                  <span className={`text-[10px] font-mono ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>{prog.duration}</span>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{prog.name}</h3>
-                <p className="text-xs text-slate-400 mb-4 font-mono">Tools: {prog.tools}</p>
+                <h3 className={`text-lg font-bold mb-2 ${darkMode ? 'text-white' : 'text-slate-900'}`}>{prog.name}</h3>
+                <p className={`text-xs font-mono mb-4 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Tools: {prog.tools}</p>
               </div>
               <Link href={prog.link} className="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs text-center transition-colors block">
                 Program Details
@@ -314,12 +314,12 @@ export default function HomePage() {
       </section>
 
       {/* Silicon Challenge Arena */}
-      <section className="py-24 bg-[#090e1d]/50 border-y border-slate-800">
+      <section className={`py-24 border-y ${darkMode ? 'bg-[#090e1d]/50 border-slate-800' : 'bg-slate-100/60 border-slate-200'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest">Gamified Engineering</span>
-            <h2 className="text-3xl sm:text-4xl font-bold">Silicon Challenge Arena</h2>
-            <p className="text-slate-400 text-sm">Solve daily RTL bugs and timing optimization puzzles to earn XP and leaderboards.</p>
+            <span className={`text-xs font-mono ${darkMode ? 'text-cyan-400' : 'text-cyan-600'} uppercase tracking-widest`}>Gamified Engineering</span>
+            <h2 className={`text-3xl sm:text-4xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Silicon Challenge Arena</h2>
+            <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Solve daily RTL bugs and timing optimization puzzles to earn XP and leaderboards.</p>
           </div>
           <ChallengeArena />
         </div>
@@ -328,25 +328,25 @@ export default function HomePage() {
       {/* Skill Passport */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest">Verified Credentials</span>
-          <h2 className="text-3xl sm:text-4xl font-bold">Silphor Skill Passport</h2>
-          <p className="text-slate-400 text-sm">Verified skill badges endorsed by top semiconductor engineering leaders.</p>
+          <span className={`text-xs font-mono ${darkMode ? 'text-cyan-400' : 'text-cyan-600'} uppercase tracking-widest`}>Verified Credentials</span>
+          <h2 className={`text-3xl sm:text-4xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Silphor Skill Passport</h2>
+          <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Verified skill badges endorsed by top semiconductor engineering leaders.</p>
         </div>
         <SkillPassport />
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-br from-blue-950 via-[#0b1329] to-indigo-950 border-t border-slate-800 relative overflow-hidden text-center">
+      <section className={`py-24 border-t relative overflow-hidden text-center ${darkMode ? 'bg-gradient-to-br from-blue-950 via-[#0b1329] to-indigo-950 border-slate-800' : 'bg-gradient-to-br from-blue-100 via-white to-indigo-100 border-slate-200'}`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white">Ready to Build the Future of Semiconductor Technology?</h2>
-          <p className="text-base text-slate-300 max-w-2xl mx-auto">
+          <h2 className={`text-3xl sm:text-5xl font-extrabold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Ready to Build the Future of Semiconductor Technology?</h2>
+          <p className={`text-base max-w-2xl mx-auto ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
             Learn, build, innovate, and grow with Silphor Technologies Private Limited.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Link href="/vlsi-programs" className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm shadow-xl shadow-blue-600/30 transition-all">
               Explore VLSI Programs
             </Link>
-            <Link href="/contact" className="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm border border-slate-700 transition-all">
+            <Link href="/contact" className={`px-6 py-3.5 rounded-xl font-medium text-sm transition-all ${darkMode ? 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-700' : 'bg-white hover:bg-slate-50 text-slate-900 border border-slate-300 shadow-sm'}`}>
               Talk to an Expert
             </Link>
           </div>
