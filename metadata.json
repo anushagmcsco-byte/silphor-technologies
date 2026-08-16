@@ -1,0 +1,6 @@
+{
+  "name": "Silphor Technologies",
+  "description": "Advanced Semiconductor Technology Company, VLSI Engineering Organization, and AI-Powered Cloud VLSI Learning Platform",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
